@@ -62,18 +62,19 @@
 ![Response Example](./screenshots/response_example.png)
 
 ---
+## 🌐 Live Link
 
-## 🌐 Live Demo
+[Watch the Chatbot in Action](https://zeotapcdp.onrender.com)
 
-[View Live Demo](#)
+---
+
+##  🎥 Video Demo
+
+[View Live Demo](https://youtu.be/JiexqwnZrSA)
 
 ---
 
-## 🎥 Video Demo
 
-[Watch the Chatbot in Action](#)
-
----
 
 ## 🏁 Getting Started
 
