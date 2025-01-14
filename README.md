@@ -55,8 +55,11 @@
 
 ## 📸 Screenshots
 
-### Chat Interface  
-![Chat Interface](./screenshots/chat_interface.png)
+### Home Page  
+![Chat Interface](./screenshots/home.png)
+
+### Login Page  
+![Chat Interface](./screenshots/login.png)
 
 ### Response Example  
 ![Response Example](./screenshots/response_example.png)
