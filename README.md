@@ -33,9 +33,9 @@
 ## 💻 Tech Stack
 
 - **Backend**: Flask
-- **AI/NLP**: SentenceTransformer (`all-MiniLM-L6-v2`)
+- **AI/NLP**: SentenceTransformer 
 - **Web Scraping**: BeautifulSoup, `requests`
-- **Frontend**: HTML templates (for chatbot UI)
+- **Frontend**: HTML, CSS, JS (for chatbot UI)
 - **Storage**: JSON (for scraped data)
 
 ---
