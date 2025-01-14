@@ -1,9 +1,6 @@
 
----
 
-### CDP Support Agent Chatbot `README.md`
 
-```markdown
 # 🤖 CDP Support Agent Chatbot
 
 **A chatbot that provides "how-to" guidance for Customer Data Platforms (Segment, mParticle, Lytics, and Zeotap) by extracting content from official documentation.**
