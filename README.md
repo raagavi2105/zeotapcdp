@@ -83,4 +83,4 @@
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/cdp-chatbot.git
+   git clone https://github.com/raagavi2105/zeotapcdp.git
