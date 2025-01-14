@@ -1,0 +1,83 @@
+/* Login Section */
+.login-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 70px);
+    padding: 20px;
+}
+
+.login-form {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 40px;
+    width: 350px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #041B29;
+    font-weight: bold;
+}
+
+/* Input Group */
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #041B29;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.input-group input:focus {
+    border-color: #0E91A5;
+    box-shadow: 0 0 5px rgba(14, 145, 165, 0.5);
+}
+
+/* Submit Button */
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #0E91A5;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #041B29;
+}
+
+/* Responsive Design for Forms */
+@media (max-width: 768px) {
+    .login-form {
+        width: 80%;
+        padding: 20px;
+    }
+
+    .chat-container {
+        width: 100%;
+    }
+}

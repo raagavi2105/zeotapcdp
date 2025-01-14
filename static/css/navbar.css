@@ -1,0 +1,96 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #041B29, #0E91A5); /* Gradient from #041B29 to #0E91A5 */
+    background-attachment: fixed; /* Ensure the background stays in place */
+    background-size: cover; /* Make sure it covers the entire body */
+    color: white;
+    height: 100vh; /* Full height */
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1);  /* Semi-transparent white */
+    backdrop-filter: blur(10px);  /* Apply blur effect */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Subtle shadow for depth */
+    padding: 15px 20px;  /* Padding for height */
+    z-index: 1000;  /* Ensure it's on top of other content */
+    border-radius: 10px;  /* Optional: Rounded corners for a smooth look */
+    height: 70px;  /* Increased navbar height */
+    display: flex;
+    justify-content: space-between;  /* Space between brand and navbar links */
+    align-items: center;
+}
+
+/* Brand (Zeotap Bot) */
+.navbar .brand {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Navbar Links Container */
+.navbar ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    gap: 45px;  /* Spacing between links */
+    flex-grow: 6;
+    justify-content: center;  /* Center the links */
+}
+
+/* Navbar List Item */
+.navbar li {
+    margin: 0;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    transition: color 0.3s ease;
+}
+
+/* Slightly move links to the left */
+.navbar ul {
+    margin-left: -150px;  /* Move the entire list slightly left */
+}
+
+/* Hover effect for links */
+.navbar a:hover {
+    color: #0E91A5;  /* Highlighted color on hover */
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+        padding: 10px;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;  /* Center links vertically */
+        margin-left: 0;  /* Remove margin-left on smaller screens */
+    }
+
+    .navbar a {
+        font-size: 16px;
+    }
+}
