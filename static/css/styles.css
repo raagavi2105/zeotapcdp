@@ -1,0 +1,306 @@
+/* Body Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #041B29, #0E91A5); /* Gradient from #041B29 to #0E91A5 */
+    background-attachment: fixed; /* Ensure the background stays in place */
+    background-size: cover; /* Make sure it covers the entire body */
+    color: white;
+    height: 100vh; /* Full height */
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1);  /* Semi-transparent white */
+    backdrop-filter: blur(10px);  /* Apply blur effect */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Subtle shadow for depth */
+    padding: 15px 20px;  /* Padding for height */
+    z-index: 1000;  /* Ensure it's on top of other content */
+    border-radius: 10px;  /* Optional: Rounded corners for a smooth look */
+    height: 70px;  /* Increased navbar height */
+    display: flex;
+    justify-content: space-between;  /* Space between brand and navbar links */
+    align-items: center;
+}
+
+/* Brand (Zeotap Bot) */
+.navbar .brand {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Navbar Links Container */
+.navbar ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    gap: 45px;  /* Spacing between links */
+    flex-grow: 6;
+    justify-content: center;  /* Center the links */
+}
+
+/* Navbar List Item */
+.navbar li {
+    margin: 0;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    transition: color 0.3s ease;
+}
+
+/* Slightly move links to the left */
+.navbar ul {
+    margin-left: -150px;  /* Move the entire list slightly left */
+}
+
+/* Hover effect for links */
+.navbar a:hover {
+    color: #0E91A5;  /* Highlighted color on hover */
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+        padding: 10px;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;  /* Center links vertically */
+        margin-left: 0;  /* Remove margin-left on smaller screens */
+    }
+
+    .navbar a {
+        font-size: 16px;
+    }
+}
+
+
+/* styles.css */
+.robot-image {
+    width: 2000px; /* Make it larger */
+    height: auto;
+    max-width: 100%;
+    margin-top: 170px; /* Adjust space around the image */
+    transform: scale(2.3); /* Slightly scale up for effect */
+}
+
+/* Hero Section and other page content */
+.hero-section {
+    padding: 100px 20px;
+    text-align: center;
+    z-index: 5; /* Ensure hero content is above the background */
+}
+
+/* Other sections */
+.main {
+    z-index: 1; /* Ensure this is below other sections */
+}
+/* Hero Section Content */
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 60px;
+}
+
+.hero-buttons button {
+    width: 150px;  /* Set a fixed width */
+    height: 50px;  /* Set a fixed height, if needed */
+    background-color: #0E91A5;  /* Button color */
+    color: white;  /* Text color */
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.hero-buttons button:hover {
+    background-color: #041B29;  /* Darken button color on hover */
+}
+
+/* Hero Graphic */
+.hero-graphic img {
+    max-width: 250px;
+    height: auto;
+}
+
+/* Chat Section */
+.chat-section {
+    padding: 50px;
+    background-color: #F4F4F4;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.chat-container {
+    width: 80%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#chatbox {
+    height: 300px;
+    overflow-y: auto;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.user-msg, .bot-msg {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.user-msg {
+    background-color: #d3f8d3;
+    align-self: flex-start;
+}
+
+.bot-msg {
+    background-color: #e6e6ff;
+    align-self: flex-end;
+}
+
+form {
+    display: flex;
+    gap: 10px;
+}
+
+input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+button[type="submit"] {
+    background-color: #0E91A5;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #041B29;
+}
+.login-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 70px); /* Adjust height to exclude navbar */
+    padding: 20px;
+}
+
+.login-form {
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    padding: 40px;
+    width: 350px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+    border-radius: 15px;
+    text-align: center;
+    backdrop-filter: blur(10px);  /* Glass effect */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #041B29;
+    font-weight: bold;
+}
+
+/* Input Group */
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #041B29;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.input-group input:focus {
+    border-color: #0E91A5;
+    box-shadow: 0 0 5px rgba(14, 145, 165, 0.5);
+}
+
+/* Submit Button */
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #0E91A5;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #041B29;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .login-form {
+        width: 80%;
+        padding: 20px;
+    }
+}
