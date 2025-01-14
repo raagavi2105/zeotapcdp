@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat with Zeotap Bot</title>
+    <link rel="stylesheet" href="/static/css/navbar.css">
+    <link rel="stylesheet" href="/static/css/chat.css">
+</head>
+<body>
+    <header class="hero-section">
+        <div class="navbar">
+            <div class="brand">Zeotap Bot</div>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/chat">Chat</a></li>
+                <li><a href="/login">Login</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <section class="chat-section">
+            <h2>Welcome to Zeotap Bot</h2>
+            <h2>The Smartest CDP Chat Assistant</h2>
+            <div class="chat-container">
+
+                <div id="chatbox">
+                    <div class="bot-msg">
+                        <img src="/static/bot.png" alt="Bot Icon">
+                        <div class="message">Sure, how can I assist you?</div>
+                    </div>
+                    <!-- Chat messages will appear here -->
+                </div>
+                <form id="chatForm">
+                    <input type="text" id="userInput" placeholder="Type your query here..." />
+                    <button type="submit" id="send-button">Send</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const sendButton = document.getElementById('send-button');
+        const chatInput = document.getElementById('userInput');
+        const chatbox = document.getElementById('chatbox');
+
+        async function handleQuery(query) {
+            // Display the user's question
+            chatbox.innerHTML += `
+                <div class="user-msg">
+                    <div class="message">${query}</div>
+                    <img src="/static/user.png" alt="User Icon">
+                </div>
+            `;
+
+            // Display a loading indicator
+            chatbox.innerHTML += `
+                <div class="message message-answer" id="loading-message">
+                    <div class="bot-icon">🤖</div>
+                    <div class="loading-dots">
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                    </div>
+                </div>
+            `;
+            chatbox.scrollTop = chatbox.scrollHeight;
+
+            try {
+                // Send query to the Flask backend
+                const response = await fetch('/query', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ query: query })
+                });
+
+                const data = await response.json();
+
+                // Remove loading indicator
+                document.getElementById('loading-message').remove();
+
+                // Display the bot's response
+                chatbox.innerHTML += `
+                    <div class="bot-msg">
+                        <img src="/static/bot.png" alt="Bot Icon">
+                        <div class="message">${data.content}</div>
+                    </div>
+                `;
+            } catch (error) {
+                console.error("Error:", error);
+
+                // Remove loading indicator in case of error
+                document.getElementById('loading-message').remove();
+
+                // Display error message
+                chatbox.innerHTML += `
+                    <div class="bot-msg">
+                        <img src="/static/bot.png" alt="Bot Icon">
+                        <div class="message">An error occurred. Please try again later.</div>
+                    </div>
+                `;
+            }
+            chatbox.scrollTop = chatbox.scrollHeight;
+        }
+
+        // Send query when the send button is clicked
+        sendButton.addEventListener('click', (e) => {
+            e.preventDefault(); // Prevent the form from submitting
+            const query = chatInput.value.trim();
+            if (!query) return;
+            handleQuery(query);
+            chatInput.value = '';
+        });
+
+        // Send query when "Enter" key is pressed
+        chatInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                const query = chatInput.value.trim();
+                if (!query) return;
+                handleQuery(query);
+                chatInput.value = '';
+            }
+        });
+    </script>
+</body>
+</html>

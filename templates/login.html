@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/static/css/navbar.css">
+    <link rel="stylesheet" href="/static/css/login.css">
+
+
+</head>
+<body>
+    <header class="hero-section">
+        <div class="navbar">
+            <div class="brand">Zeotap Bot</div>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/chat">Chat</a></li>
+                <li><a href="/login">Login</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <section class="login-section">
+            <div class="login-form">
+                <h2>Login</h2>
+                <form id="loginForm">
+                    <div class="input-group">
+                        <input type="text" id="name" placeholder="Enter your name" required />
+                    </div>
+                    <div class="input-group">
+                        <input type="email" id="email" placeholder="Enter your email" required />
+                    </div>
+                    <button type="submit" class="submit-btn">Next</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();  // Prevent the form from submitting the traditional way
+
+            // Get the form data (optional)
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+
+            // Here you can add logic to save the name or email if needed
+
+            // Redirect to the chat page
+            window.location.href = '/chat';
+        });
+    </script>
+</body>
+</html>
