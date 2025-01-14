@@ -5,6 +5,18 @@
 
 **A chatbot that provides "how-to" guidance for Customer Data Platforms (Segment, mParticle, Lytics, and Zeotap) by extracting content from official documentation.**
 
+
+---
+## 🌐 Live Link
+
+[Watch the Chatbot in Action](https://zeotapcdp.onrender.com)
+
+---
+
+##  🎥 Video Demo
+
+[View Live Demo](https://youtu.be/JiexqwnZrSA)
+
 ---
 
 ## 🚀 Features
@@ -64,18 +76,7 @@
 ### Response Example  
 ![Response Example](./screenshots/response_example.png)
 
----
-## 🌐 Live Link
 
-[Watch the Chatbot in Action](https://zeotapcdp.onrender.com)
-
----
-
-##  🎥 Video Demo
-
-[View Live Demo](https://youtu.be/JiexqwnZrSA)
-
----
 
 
 
